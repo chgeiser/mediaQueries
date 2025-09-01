@@ -81,18 +81,16 @@
                          'footer';
 }
 
-@media(max-width:576px){
-    .nav-links{
-    display: none;
-  }
-    .hamburger-button {
-    display: block; 
-    
-  }
-}
+
 
 @media(min-width: 576px){
+  .nav-links {
+  display: block;
+}
 
+  .hamburger-button {
+    display: none;
+  }
     .main-container{
         grid-template-areas: 'nav search search'
                             'nav main main'
@@ -104,8 +102,18 @@
     }
 }
 
+/*
 @media(min-width: 768px){
- 
+ .hamburger-button {
+    display: none;
+  }
+
+  .nav-links {
+  display: block;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
     .main-container{
         grid-template-areas: 'nav search search'
                             'nav main main'
@@ -117,11 +125,20 @@
     } 
 
 }
+*/
 
-
-
+/*
 @media(min-width: 1024px){
+.hamburger-button {
+    display: none;
+  }
 
+  .nav-links {
+  display: block;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
     .main-container{
        grid-template-areas: 'nav search search'
                             'nav main main'
@@ -133,14 +150,16 @@
         grid-template-columns: 150px auto auto;
     }
 }
-
+*/
 
 nav {
     background-color: rgb(5, 172, 243);
     grid-area: nav;
+    color: white;
+    padding: 1rem;
     display: flex;
-    justify-content: center;
-    align-items: start;
+    justify-content: space-between;
+    align-items: center;
     
 }
 
@@ -166,14 +185,21 @@ main{
 
 footer{
     grid-area: footer;
+    flex-grow: 1;
     display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
     background-color:blue;
     color: white;
     padding: 10px;
+}
+
+.footer-iconos{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 
 
@@ -203,13 +229,14 @@ align-items: center;
 }
 
 .nav-links {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+display: none;
+list-style: none;
+margin: 0;
+padding: 0;
 }
 
 .hamburger-button {
-  display: none; /* Oculto por defecto */
+  display: block; 
   flex-direction: column;
   justify-content: space-around;
   width: 25px;
