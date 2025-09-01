@@ -86,7 +86,7 @@
     display: none;
   }
     .hamburger-button {
-    display: flex; 
+    display: block; 
     
   }
 }
