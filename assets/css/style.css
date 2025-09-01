@@ -70,8 +70,10 @@
 
 .main-container{
     display: grid;
-    border: 1px solid black;
-    grid-template-rows: 1fr 8fr 1fr 1fr;
+    height: 100vh;
+    width: 100vw;
+    grid-template-rows: 1fr 1fr 10fr 1fr;
+    grid-template-columns: 300px 1fr 10fr 1fr;
     grid-template-areas: 'nav'
                          'search'
                          'main'
@@ -80,25 +82,25 @@
 
 @media(min-width: 576px){
     .main-container{
-        grid-template-areas: 'nav search search search'
-                            'nav main main main'
-                            'nav main main main'
-                            'footer main main main';
+        grid-template-areas: 'nav search search'
+                            'nav main main'
+                            'nav main main'
+                            'footer main main';
     }
     .main{
-        grid-template-columns: 1fr 8fr 1fr 1fr;
+        grid-template-columns: 150px auto auto;
     }
 }
 
 @media(min-width: 768px){
     .main-container{
-        grid-template-areas: 'nav search search search'
-                            'nav main main main'
-                            'nav main main main'
-                            'footer main main main';
+        grid-template-areas: 'nav search search'
+                            'nav main main'
+                            'nav main main'
+                            'footer main main';
     }
     .main{
-        grid-template-columns: 1fr 8fr 1fr 1fr;
+        grid-template-columns: 150px auto auto;
     }
 }
 
@@ -106,14 +108,14 @@
 
 @media(min-width: 1024px){
     .main-container{
-       grid-template-areas: 'nav search search search'
-                            'nav main main main'
-                            'nav main main main'
-                            'footer main main main';
+       grid-template-areas: 'nav search search'
+                            'nav main main'
+                            'nav main main'
+                            'footer main main';
                             
     }
     .main{
-        grid-template-columns: 1fr 8fr 1fr 1fr;
+        grid-template-columns: 150px auto auto;
     }
 }
 
